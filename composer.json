@@ -1,0 +1,13 @@
+{
+    "name": "hallindavid/laravel-phone-helper",
+    "description": "a set of globally accessible functions that help you easily format phone numbers in laravel",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Hallin",
+            "email": "hallin.david@gmail.com"
+        }
+    ],
+    "require": {}
+}
