@@ -1,4 +1,4 @@
-[![hallindavid](https://circleci.com/gh/hallindavid/PhoneHelper.svg?style=svg)](<LINK>)
+![hallindavid](https://circleci.com/gh/hallindavid/PhoneHelper.svg?style=svg)
 
 # PhoneHelper
 
@@ -45,11 +45,12 @@ class TestController extends Controller
 By default the PhoneHelper comes with these formats
 
 
-| Format                                   | Output (with 88888888888888888) entered |
+| Format                                   | Output (with 8888888888888) entered |
 |------------------------------------------|-----------------------------------------|
 | 10                                       | 8888888888                              |
 | 10-dash (default)                        | 888-888-8888                            |
 | 10-brack                                 | (888) 888-8888                          |
+| 10-brack-ext                             | (888) 888-8888 ext. 888                 |
 | 10-dot                                   | 888.888.8888                            |
 | 11                                       | 18888888888                             |
 | 11-dash                                  | 1-888-888-8888                          |
@@ -96,7 +97,11 @@ returns: "+1 (888) 888-8888 ext. 888
 
 
 ## Testing
-
+There are a tonne of tests for the packaged formats - to run them, pull the package then
+```
+composer install
+composer run test
+```
 
 ## Support
 To say thanks, you can share the project on social media or <br />

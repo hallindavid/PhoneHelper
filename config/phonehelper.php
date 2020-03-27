@@ -57,6 +57,15 @@ return [
 				'exchange_line'=>'-',
 			],
 		],
+		'10-brack-ext'=>[ 	//	format("8888888888") = "(888) 888-8888"
+			'parts'=>['area', 'exchange','line', 'extension'],
+			'delimiters'=>[
+				'country_area'=>'(',
+				'area_exchange'=>') ',
+				'exchange_line'=>'-',
+				'line_extension'=>' ext. ',
+			],
+		],
 		'10-dot'=>[ 	//	format("8888888888") = "888.888.8888"
 			'parts'=>['area', 'exchange','line'],
 			'delimiters'=>[
