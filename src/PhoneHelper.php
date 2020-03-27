@@ -110,19 +110,15 @@ class PhoneHelper
     		if (is_string($format)) {
     			if (array_key_exists($format, config('phonehelper.formats'))) {
     				$desired_format = $format;
-    			} else {
-    				// Format was not in the config file.  Throw an error OR proceed using defaults
-    				if (config('phonehelper.throw_errors')) {
-    					throw new \OutOfBoundsException('the format was not found in your phonehelper configuration file');
-    				}
-    			}
-    		} else {
-    			// Something else was passed into the format field.  Throw an error or proceed using defaults
-    			if (config('phonehelper.throw_errors')) {
-    				throw new \InvalidArgumentException('the format parameter was expecting a string');
-    			}
-    		} 
-    	}
+    			} elseif (config('phonehelper.throw_errors')) {
+                    // Format was not in the config file.  Throw an error OR proceed using defaults
+                    throw new \OutOfBoundsException('the format was not found in your phonehelper configuration file');
+                }
+            } elseif (config('phonehelper.throw_errors')) {
+                // Something else was passed into the format field.  Throw an error or proceed using defaults
+                throw new \InvalidArgumentException('the format parameter was expecting a string');
+            }
+        }
 
     	//Ensure format exists in the system
     	if (!array_key_exists($desired_format, config('phonehelper.formats'))) {
