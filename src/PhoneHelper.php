@@ -128,9 +128,9 @@ class PhoneHelper
     	if (!array_key_exists($desired_format, config('phonehelper.formats'))) {
     		if (config('phonehelper.throw_errors')) {
     			throw new OutOfBoundsException('the format was not found in your phonehelper configuration file');
-    		} else {
-    			return "";
     		}
+
+            return '';
     	}
 
     	$format_config = config('phonehelper.formats')[$desired_format];
@@ -140,9 +140,9 @@ class PhoneHelper
     		// this means that our format is either missing the parts key, or the parts array is empty
     		if (config('phonehelper.throw_errors')) {
     			throw new OutOfBoundsException('the format is either missing the parts key, or the parts array is empty');
-    		} else {
-    			return "";
     		}
+
+            return '';
     	}
     	//Now we know what the user wants, lets get to work
     	return $this->make_phone($phone_number, $format_config);
