@@ -1,13 +1,53 @@
 {
-    "name": "hallindavid/laravel-phone-helper",
-    "description": "a set of globally accessible functions that help you easily format phone numbers in laravel",
-    "type": "composer-plugin",
+    "name": "hallindavid/phonehelper",
+    "description": "A super easy to use phone number formatter for Laravel.  Note - Only works on north american phone numbers ",
+    "keywords": [
+        "phone",
+        "format",
+        "formatter",
+        "number"
+    ],
     "license": "MIT",
     "authors": [
         {
             "name": "David Hallin",
-            "email": "hallin.david@gmail.com"
+            "email": "hallin.david@gmail.com",
+            "homepage":"https://davidhallin.com",
+            "role":"Developer"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.0",
+        "orchestra/testbench": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hallindavid\\PhoneHelper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hallindavid\\PhoneHelper\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hallindavid\\PhoneHelper\\PhoneHelperServiceProvider"
+            ],
+            "aliases": {
+                "PhoneHelper": "Hallindavid\\PhoneHelper\\PhoneHelperFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
