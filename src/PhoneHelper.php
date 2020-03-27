@@ -101,7 +101,7 @@ class PhoneHelper
     	{
     		//if phone number isn't a string, we wrap up here #thatwaseasy
     		if (config('phonehelper.throw_errors')) {
-    			throw new InvalidArgumentException('phone number expected to be a string');
+    			throw new \InvalidArgumentException('phone number expected to be a string');
     		} 
     		return "";
     	}
@@ -113,13 +113,13 @@ class PhoneHelper
     			} else {
     				// Format was not in the config file.  Throw an error OR proceed using defaults
     				if (config('phonehelper.throw_errors')) {
-    					throw new OutOfBoundsException('the format was not found in your phonehelper configuration file');
+    					throw new \OutOfBoundsException('the format was not found in your phonehelper configuration file');
     				}
     			}
     		} else {
     			// Something else was passed into the format field.  Throw an error or proceed using defaults
     			if (config('phonehelper.throw_errors')) {
-    				throw new InvalidArgumentException('the format parameter was expecting a string');
+    				throw new \InvalidArgumentException('the format parameter was expecting a string');
     			}
     		} 
     	}
@@ -127,7 +127,7 @@ class PhoneHelper
     	//Ensure format exists in the system
     	if (!array_key_exists($desired_format, config('phonehelper.formats'))) {
     		if (config('phonehelper.throw_errors')) {
-    			throw new OutOfBoundsException('the format was not found in your phonehelper configuration file');
+    			throw new \OutOfBoundsException('the format was not found in your phonehelper configuration file');
     		}
 
             return '';
@@ -139,7 +139,7 @@ class PhoneHelper
     	if (!(array_key_exists("parts", $format_config)	&& (count($format_config['parts']) > 0))) {
     		// this means that our format is either missing the parts key, or the parts array is empty
     		if (config('phonehelper.throw_errors')) {
-    			throw new OutOfBoundsException('the format is either missing the parts key, or the parts array is empty');
+    			throw new \OutOfBoundsException('the format is either missing the parts key, or the parts array is empty');
     		}
 
             return '';
