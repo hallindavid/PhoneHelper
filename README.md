@@ -100,7 +100,7 @@ returns: "+1 (888) 888-8888 ext. 888
 There are a tonne of tests for the packaged formats - to run them, pull the package then
 ```
 composer install
-composer run test
+composer test
 ```
 
 ## Support

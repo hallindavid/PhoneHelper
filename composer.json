@@ -5,7 +5,8 @@
         "phone",
         "format",
         "formatter",
-        "number"
+        "number",
+        "laravel"
     ],
     "license": "MIT",
     "authors": [
