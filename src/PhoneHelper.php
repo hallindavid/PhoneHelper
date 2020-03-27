@@ -27,7 +27,7 @@ class PhoneHelper
     	//clean the string down to it's digits
     	$clean = $this->clean_phone($phone_number); 
         $add_country = (strlen($clean) > 0);
-    	if (substr($clean,0,1) == "1") {
+    	if (substr($clean,0,1) === '1') {
     		$clean = substr($clean,1);
     	}
 
@@ -79,11 +79,11 @@ class PhoneHelper
 		if (count($format_delimiters) > 0) {
 			foreach($format_delimiters as $key=>$val) {
 				if  ((array_key_exists($key, $format_delimiters) && array_key_exists($key, $parts))
-                        && (    ($key == 'prefix' && (strlen($parts['country']) > 0)) ||
-                                ($key == 'country_area' && (strlen($parts['area']) > 0)) ||
-                                ($key == 'area_exchange' && (strlen($parts['exchange']) > 0)) ||
-                                ($key == 'exchange_line' && (strlen($parts['line']) > 0)) || 
-                                ($key == 'line_extension' && (strlen($parts['extension']) > 0))))
+                        && (    ($key === 'prefix' && (strlen($parts['country']) > 0)) ||
+                                ($key === 'country_area' && (strlen($parts['area']) > 0)) ||
+                                ($key === 'area_exchange' && (strlen($parts['exchange']) > 0)) ||
+                                ($key === 'exchange_line' && (strlen($parts['line']) > 0)) ||
+                                ($key === 'line_extension' && (strlen($parts['extension']) > 0))))
                     {
 					$parts[$key] = $val;
 				}
