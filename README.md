@@ -1,3 +1,5 @@
+[![hallindavid](https://circleci.com/gh/hallindavid/PhoneHelper.svg?style=svg)](<LINK>)
+
 # PhoneHelper
 
 A super easy to use phone number formatter for Laravel.  Note - Only works on north american phone numbers 
