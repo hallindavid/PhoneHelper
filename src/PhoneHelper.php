@@ -12,13 +12,17 @@ class PhoneHelper
 	/**
      * Cleans a string down to it's digits
      * 
-     * @param String $str
-     * @return String
+     * @param string $str
+     * @return string
      */
     private function clean_phone($str) {
     	return preg_replace("/[^0-9]/","", $str);
     }
 
+    /**
+     * @param string $phone_number
+     * @return array
+     */
     private function get_phone_parts($phone_number) {
     	//clean the string down to it's digits
     	$clean = $this->clean_phone($phone_number); 
@@ -36,6 +40,11 @@ class PhoneHelper
 		];
     }
 
+    /**
+     * @param string $phone_number
+     * @param array $format_config
+     * @return string
+     */
     private function make_phone($phone_number, $format_config) {
 		$phone = $this->get_phone_parts($phone_number);
     	$format_parts = $format_config['parts']; //get's the parts of the phone number the user wants
@@ -87,11 +96,11 @@ class PhoneHelper
 
 	/**
 	 * Beautifully Formats a north american phone number
-	 * @param String $phone_number
-	 * @param String $format - see the phonehelper.php config file to see options
-	 * @param Boolean $extension - if set to true, enables extensions
+	 * @param string $phone_number
+	 * @param string $format - see the phonehelper.php config file to see options
+	 * @param bool $extension - if set to true, enables extensions
 	 * 
-	 * @return String - the beautifully formatted phone number in the format of your choosing
+	 * @return string - the beautifully formatted phone number in the format of your choosing
 	 */ 
 	public function format($phone_number, $format = NULL)
     {
