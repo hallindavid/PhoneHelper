@@ -36,7 +36,7 @@ class PhoneHelper
 		];
     }
 
-    function make_phone($phone_number, $format_config) {
+    private function make_phone($phone_number, $format_config) {
 		$phone = $this->get_phone_parts($phone_number);
     	$format_parts = $format_config['parts']; //get's the parts of the phone number the user wants
 
