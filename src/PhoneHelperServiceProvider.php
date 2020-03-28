@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider;
 
 class PhoneHelperServiceProvider extends ServiceProvider
 {
-
     /**
      * Register services.
      *
@@ -18,7 +17,7 @@ class PhoneHelperServiceProvider extends ServiceProvider
             __DIR__.'/../config/phonehelper.php', 'phonehelper'
         );
 
-        $this->app->singleton('phonehelper', function() {
+        $this->app->singleton('phonehelper', function () {
             return $this->app->make('Hallindavid\PhoneHelper\PhoneHelper');
         });
     }
