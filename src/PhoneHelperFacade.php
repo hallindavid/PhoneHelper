@@ -1,12 +1,13 @@
 <?php
-	
-	namespace Hallindavid\PhoneHelper;
-	use Illuminate\Support\Facades\Facade;
 
-	class PhoneHelperFacade extends Facade {
+namespace Hallindavid\PhoneHelper;
 
-		protected static function getFacadeAccessor()
-		{
-		    return 'phonehelper';
-		}		
-	}
+    use Illuminate\Support\Facades\Facade;
+
+    class PhoneHelperFacade extends Facade
+    {
+        protected static function getFacadeAccessor()
+        {
+            return 'phonehelper';
+        }
+    }
