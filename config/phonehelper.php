@@ -50,7 +50,7 @@ return [
                 'exchange_line'=>'-',
             ],
         ],
-        '10-brack'=>[ 	//	format("8888888888") = "(888) 888-8888"
+        '10-brack'=>[ // format("8888888888") = "(888) 888-8888"
             'parts'=>['area', 'exchange', 'line'],
             'delimiters'=>[
                 'country_area'=>'(',
@@ -58,7 +58,7 @@ return [
                 'exchange_line'=>'-',
             ],
         ],
-        '10-brack-ext'=>[ 	//	format("8888888888") = "(888) 888-8888"
+        '10-brack-ext'=>[ // format("8888888888") = "(888) 888-8888"
             'parts'=>['area', 'exchange', 'line', 'extension'],
             'delimiters'=>[
                 'country_area'=>'(',
@@ -67,7 +67,7 @@ return [
                 'line_extension'=>' ext. ',
             ],
         ],
-        '10-dot'=>[ 	//	format("8888888888") = "888.888.8888"
+        '10-dot'=>[ // format("8888888888") = "888.888.8888"
             'parts'=>['area', 'exchange', 'line'],
             'delimiters'=>[
                 'area_exchange'=>'.',
@@ -85,7 +85,7 @@ return [
                 'exchange_line'=>'-',
             ],
         ],
-        '11-brack'=>[ 	//	format("8888888888") = "1 (888) 888-8888"
+        '11-brack'=>[ // format("8888888888") = "1 (888) 888-8888"
             'parts'=>['country', 'area', 'exchange', 'line'],
             'delimiters'=>[
                 'country_area'=>' (',
@@ -93,7 +93,7 @@ return [
                 'exchange_line'=>'-',
             ],
         ],
-        '11-dot'=>[ 	//	format("8888888888") = "1.888.888.8888"
+        '11-dot'=>[ // format("8888888888") = "1.888.888.8888"
             'parts'=>['country', 'area', 'exchange', 'line'],
             'delimiters'=>[
                 'country_area'=>'.',

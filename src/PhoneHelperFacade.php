@@ -2,12 +2,12 @@
 
 namespace Hallindavid\PhoneHelper;
 
-    use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\Facades\Facade;
 
-    class PhoneHelperFacade extends Facade
+class PhoneHelperFacade extends Facade
+{
+    protected static function getFacadeAccessor()
     {
-        protected static function getFacadeAccessor()
-        {
-            return 'phonehelper';
-        }
+        return 'phonehelper';
     }
+}
