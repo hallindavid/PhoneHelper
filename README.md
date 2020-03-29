@@ -67,7 +67,7 @@ You can publish the configuration
 php artisan vendor:publish --provider="Hallindavid\PhoneHelper\PhoneHelperServiceProvider"
 ```
 
-This will create the configuration file: `app/config/phonehelper.php`
+This will create the configuration file: `config/phonehelper.php`
 
 From here you are able to add/remove/edit formats and there are lots of comments which can help you do that.
 
