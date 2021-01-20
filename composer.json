@@ -1,53 +1,53 @@
 {
-    "name": "hallindavid/phonehelper",
-    "description": "A super easy to use phone number formatter for Laravel.  Note - Only works on north american phone numbers ",
-    "keywords": [
-        "phone",
-        "format",
-        "formatter",
-        "number",
-        "laravel"
-    ],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "David Hallin",
-            "email": "hallin.david@gmail.com",
-            "homepage":"https://davidhallin.com",
-            "role":"Developer"
-        }
-    ],
-    "require": {
-        "php": "^7.2",
-        "illuminate/support": "^6.0|^7.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^8.0|^9.0",
-        "orchestra/testbench": "^5.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "Hallindavid\\PhoneHelper\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Hallindavid\\PhoneHelper\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit --testdox"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Hallindavid\\PhoneHelper\\PhoneHelperServiceProvider"
-            ],
-            "aliases": {
-                "PhoneHelper": "Hallindavid\\PhoneHelper\\PhoneHelperFacade"
-            }
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "hallindavid/phonehelper",
+  "description": "A super easy to use phone number formatter for Laravel.  Note - Only works on north american phone numbers ",
+  "keywords": [
+    "phone",
+    "format",
+    "formatter",
+    "number",
+    "laravel"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David Hallin",
+      "email": "hallin.david@gmail.com",
+      "homepage": "https://davidhallin.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "illuminate/support": "^6.0|^7.0|^8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.0|^9.0",
+    "orchestra/testbench": "^5.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hallindavid\\PhoneHelper\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Hallindavid\\PhoneHelper\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit --testdox"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Hallindavid\\PhoneHelper\\PhoneHelperServiceProvider"
+      ],
+      "aliases": {
+        "PhoneHelper": "Hallindavid\\PhoneHelper\\PhoneHelperFacade"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
